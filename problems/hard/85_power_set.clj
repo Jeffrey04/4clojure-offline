@@ -18,14 +18,3 @@
 ; 					(prn pairing " + " elem)
 ; 					(clojure.set/union pairing elem)))))] (do (prn x) (conj x #{}))))
 
-(fn power-set [coll]
-	(if (empty? coll)
-		#{coll}
-		(conj 
-			(set
-				(for [elem   coll
-							:let   [other (disj coll elem)]
-							subset (conj (power-set other) #{})]
-					(do 
-						(conj subset elem))))
-			#{})))

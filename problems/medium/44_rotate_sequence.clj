@@ -7,6 +7,3 @@
 ; (= (__ 1 '(:a :b :c)) '(:b :c :a))
 ; (= (__ -4 '(:a :b :c)) '(:c :a :b))
 
-(fn [i coll]
-	(let [n (mod i (count coll))]
-			(concat (drop n coll) (take n coll))))

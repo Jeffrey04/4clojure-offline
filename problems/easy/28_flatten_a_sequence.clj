@@ -6,10 +6,3 @@
 ; (= (__ ["a" ["b"] "c"]) '("a" "b" "c"))
 ; (= (__ '((((:a))))) '(:a))
 
-(fn flat [coll]
-	(reduce
-		(fn [result elem] 
-			(if (coll? elem)
-			  (vec (concat result (flat elem)))
-				(conj result elem)))
-	 	[] coll))

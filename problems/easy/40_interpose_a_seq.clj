@@ -6,9 +6,3 @@
 ; (= (apply str (__ ", " ["one" "two" "three"])) "one, two, three")
 ; (= (__ :z [:a :b :c :d]) [:a :z :b :z :c :z :d])
 
-(fn [sep coll]
-	(reduce (fn [acc elem]
-		(if (empty? acc)
-			(conj acc elem)
-			(conj (conj acc sep) elem)))
-	[] coll))

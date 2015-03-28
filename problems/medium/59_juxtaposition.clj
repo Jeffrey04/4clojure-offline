@@ -6,4 +6,3 @@
 ; (= ["HELLO" 5] ((__ #(.toUpperCase %) count) "hello"))
 ; (= [2 6 4] ((__ :a :c :b) {:a 2, :b 4, :c 6, :d 8 :e 10}))
 
-(fn [& fs] (fn [& args] (for [f fs] (apply f args))))

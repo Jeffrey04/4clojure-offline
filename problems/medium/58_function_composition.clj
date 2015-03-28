@@ -7,4 +7,3 @@
 ; (= true ((__ zero? #(mod % 8) +) 3 5 7 9))
 ; (= "HELLO" ((__ #(.toUpperCase %) #(apply str %) take) 5 "hello world"))
 
-(fn [& args] (reduce #(fn [& _args] (%2 (apply %1 _args))) (reverse args)))

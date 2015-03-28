@@ -6,11 +6,3 @@
 ; (= (__ #(apply / %) [[1 2] [2 4] [4 6] [3 6]])    {1/2 [[1 2] [2 4] [3 6]], 2/3 [[4 6]]})
 ; (= (__ count [[1] [1 2] [3] [1 2 3] [2 3]])    {1 [[1] [3]], 2 [[1 2] [2 3]], 3 [[1 2 3]]})
 
-(fn [f coll]
-	(reduce
-		(fn [result elem]
-			(let [key  (f elem)
-					  vals (get result key [])]
-				(assoc result key (conj vals elem))))
-		{}
-		coll))

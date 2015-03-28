@@ -8,4 +8,3 @@
 ; (= false (__ true true true))
 ; (= true (__ true true true false))
 
-#(true? (and (some true? %&) (not (every? true? %&))))

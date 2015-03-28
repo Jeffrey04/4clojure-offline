@@ -5,4 +5,3 @@
 ; (= (__ "Jenn") "Hello, Jenn!")
 ; (= (__ "Rhea") "Hello, Rhea!")
 
-#(str "Hello, " %1 "!")
