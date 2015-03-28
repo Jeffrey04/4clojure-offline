@@ -6,3 +6,15 @@
 ; (= (__ 2 (range 8)) '((0 1) (2 3) (4 5) (6 7)))
 ; (= (__ 3 (range 8)) '((0 1 2) (3 4 5)))
 
+(fn [n i-list]
+    (filter
+        #(= n (count %))
+        (reduce
+        (fn [current next]
+            (let [head (drop-last current) tail (last current)]
+                (if (nil? last) (vector next)
+                    (if (= n (count tail))
+                        (conj (apply vector current) (vector next))
+                        (conj (apply vector head) (conj (apply vector tail) next))))))
+        []
+        i-list)))
